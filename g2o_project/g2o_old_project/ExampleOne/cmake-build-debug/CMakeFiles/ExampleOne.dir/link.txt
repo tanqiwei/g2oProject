@@ -1,1 +1,0 @@
-/usr/bin/c++   -g   CMakeFiles/ExampleOne.dir/main.cpp.o CMakeFiles/ExampleOne.dir/CurveFittingVetex.cpp.o CMakeFiles/ExampleOne.dir/CurveFittingEdge.cpp.o  -o ExampleOne -lg2o_core -lg2o_stuff 

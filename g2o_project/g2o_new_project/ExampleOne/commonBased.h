@@ -10,7 +10,7 @@
 #include <chrono>//计算流逝时间
 
 // 为生成高斯随机数而引入的opencv
-#include <opencv2/core.hpp>
+//#include <opencv2/core.hpp>
 
 // 引入g2o
 // 引入矩阵块
@@ -26,6 +26,7 @@
 #include <g2o/core/base_vertex.h>
 // 边
 #include <g2o/core/base_unary_edge.h> // 模拟一元超边(unary hyper-edge)的模板类
-
+//　随机采样器
+#include <g2o/stuff/sampler.h>
 
 #endif //EXAMPLEONE_COMMONBASED_H
