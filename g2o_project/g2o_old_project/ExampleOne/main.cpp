@@ -84,7 +84,7 @@ int main()
     std::cout << "\t\t\t\t start optimization" << std::endl;
     std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
     optimizer.initializeOptimization();
-    optimizer.optimize(100);//在initializeOptimization之后调用,给出图的当前运行配置,多少类示例
+    optimizer.optimize(100);//设置最大迭代次数
     std::chrono::steady_clock::time_point t2 = std::chrono::steady_clock::now();
     std::chrono::duration<double> time_used = std::chrono::duration_cast<std::chrono::duration<double>> (t2-t1);
     std::cout << "====================================================" << std::endl;
