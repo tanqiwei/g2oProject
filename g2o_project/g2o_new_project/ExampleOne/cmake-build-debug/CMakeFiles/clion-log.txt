@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/tanqiwei/Documents/labCodeProject/g2oProject/g2o_project/g2o_new_project/ExampleOne
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/tanqiwei/Documents/labCodeProject/g2oProject/g2o_project/g2o_new_project/ExampleOne/cmake-build-debug
