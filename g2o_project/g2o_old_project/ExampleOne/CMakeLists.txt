@@ -11,25 +11,27 @@ find_package( G2O REQUIRED )
 # Eigen3
 find_package(Eigen3  REQUIRED)
 # OpenCV
-find_package( OpenCV REQUIRED )
+# find_package( OpenCV REQUIRED )
 # g2o
 find_package( G2O REQUIRED )
 include_directories(
         ${G2O_INCLUDE_DIRS}
         ${EIGEN3_INCLUDE_DIR}
-        ${OpenCV_DIRS})
+       # ${OpenCV_DIRS}
+)
 
 # 目前只需要这两个   g2o_core g2o_stuff
 SET(G2O_LIBS g2o_core g2o_stuff )
 # Set link libraries
 list(APPEND LINK_LIBS
-        ${OpenCV_LIBS}
+        # ${OpenCV_LIBS}
         ${G2O_LIBS}
 )
 
 add_executable(ExampleOne
         main.cpp
         CurveFittingVetex.cpp
-        CurveFittingEdge.cpp)
+        CurveFittingEdge.cpp
+        )
 
 target_link_libraries(ExampleOne ${LINK_LIBS})
