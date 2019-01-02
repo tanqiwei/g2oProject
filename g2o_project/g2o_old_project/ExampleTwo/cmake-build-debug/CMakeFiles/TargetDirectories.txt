@@ -1,3 +1,0 @@
-/home/tqw/Documents/studyAtLab/g2oProject/g2o_project/g2o_old_project/ExampleTwo/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/tqw/Documents/studyAtLab/g2oProject/g2o_project/g2o_old_project/ExampleTwo/cmake-build-debug/CMakeFiles/ExampleTwo.dir
-/home/tqw/Documents/studyAtLab/g2oProject/g2o_project/g2o_old_project/ExampleTwo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
