@@ -25,7 +25,7 @@ int main()
     double a = 1.0,b=2.0,c =1.0;
     int N = 100;// 数据点的数量
     double w_sigma = 1.0;// 噪声的方差Sigma
-    cv::RNG rng;// opencv随机数产生器
+    //cv::RNG rng;// opencv随机数产生器,如果要使用opencv的高斯0均值随机数发生器,请在commonBased引入[将注释取消即可]
     double abc[3] = {0,0,0};// abc参数的估计值
 
     std::vector<double> x_data,y_data;//保存随机数的值,即模拟真实点的情况
@@ -36,8 +36,10 @@ int main()
         double  x = i/100.0;
         x_data.push_back(x);
         y_data.push_back(
-                exp(a*x*x+b*x+c)+rng.gaussian(w_sigma)
+                //exp(a*x*x+b*x+c)+rng.gaussian(w_sigma)
+                exp(a*pow(x,2)+b*x+c)+g2o::Sampler::gaussRand(0,w_sigma)// 采用G2O的随机发生器
         );
+
         std::cout << x_data[i] << " " << y_data[i] << std::endl;
     }
     std::cout << "====================================================" << std::endl;
@@ -94,10 +96,5 @@ int main()
     // 输出优化值
     Eigen::Vector3d abc_estimate = v->estimate();
     std::cout << "\t\t estimated model:" << abc_estimate.transpose() << std::endl;
-
-
-
-
-
     return 0;
 }
